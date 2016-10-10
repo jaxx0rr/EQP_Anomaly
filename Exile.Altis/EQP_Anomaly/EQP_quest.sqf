@@ -24,7 +24,7 @@ if (
 
 // Блок конфигурации
 _detector		= 'MineDetector';
-_questItem		= 'Exile_Item_TreasureMap';
+_questItem		= 'Exile_Magazine_Battery';
 _title			= "<t color='#7FFF00' size='1.2' shadow='1' shadowColor='#000000' align='center'>ANOMALY ACTIVITY TASK:</t><br/><t color='#ffffff'>¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯<br/>";
 _htext			= "";
 _notification		= "";
@@ -43,8 +43,8 @@ switch (_questman) do {
 	case ('Basil_Obukhov'): {
 		if (player getVariable ["questCurrent", ""] == "" && {!("Basil_Obukhov" in _quests)}) then {
 			player setVariable ["questCurrent", "Basil_Obukhov"];
-			_htext	= "Hi man. My name is Vasily Obukhov . It is a strange place dude. But here, too, we need the money. Do you want to earn a few coins , and my location, make me one processing . Here nearby there is a strange place . Where land and grass flying up . I'll give you anomaly detector , go back and apply your location (the award in 2550 and 500 PopTabs REP.."; 
-			_notification = "Find Gravi";
+			_htext	= "Hi man. My name is Basil Obukhov. It is a strange place dude but here, too, we need the money. Do you want to earn a few coins? Here nearby there is a strange place. Where land and grass is flying up. I'll give you anomaly detector, go there and apply your location."; 
+			_notification = "Find Anomaly Gravi";
 			player addItem _detector;
 			player setVariable ["questAnomalyType", "gravi", true];
 		} else {
@@ -52,9 +52,10 @@ switch (_questman) do {
 				switch (true) do {
 					case (_questItem in _inventoryItems): {
 						call _fnc_taskComplited;
-						_htext	= "Wow . You found an anomaly , now we have to carry this map to Ivan Demidov . You will find it in the eastern trade area.";
+						_htext	= "Wow. You found the anomaly, now we have to carry this map to Ivan Demidov. You will find it in the eastern trade area.";
 						_notification = "Find Ivan Demidov";
 						player addItem 'H_PilotHelmetFighter_O';
+						player addItem 'Exile_Item_CodeLock';
 					};
 					case (_detector in _inventoryItems): {
 						_notification = "You are already in a quest";
@@ -71,8 +72,8 @@ switch (_questman) do {
 	case ('Ivan_Demidov'): {
 		if (player getVariable ["questCurrent", ""] == "" && {"Basil_Obukhov" in _quests} && {!("Ivan_Demidov" in _quests)}) then {
 			player setVariable ["questCurrent", "Ivan_Demidov"];
-			_htext	= "Well, the day today. Where are you bro ? South Aero? .. Basil 's not calm down . Map brought ? Excellent. Here beside another . Learn it and mark on the map . Be careful. Do not come too close to it!"; 
-			_notification = "Find anomaly meatgrinder";
+			_htext	= "Well, the day today. Where are you bro? Ur breaking up..!??? Basil's not calm down. Hi there! You brought the Map? Excellent. Now you must find this anomaly, just follow the smell, rotten flesh, yuk. Learn it and mark on the map. Be careful. Do not come too close to it!"; 
+			_notification = "Find Anomaly Meatgrinder";
 			player addItem _detector;
 			player setVariable ["questAnomalyType", "meat", true];
 		} else {
@@ -80,8 +81,10 @@ switch (_questman) do {
 				switch (true) do {
 					case (_questItem in _inventoryItems): {
 						call _fnc_taskComplited;
-						_htext	= "Damn. Detector is fail. Well, what are you bro ? Ditching the Japanese unit . Okay. Lucky you today . I have a couple of girls Boris ... heh heh ... I exhaust device . take it  him.";
+						_htext	= "What? Detector is fail?! Hold on, i'll phone Boris.. - Boris? Bad news. We are ditching the Japanese unit... The Device is exhausted. Yes I'll send you the guy. - Go to Boris Britva, he's waiting for you on the west side of the island.";
 						_notification = "Find Boris Britva";
+						player addItem 'Exile_Item_CodeLock';
+						player addItem 'Exile_Item_CodeLock';
 					};
 					case (_detector in _inventoryItems): {
 						_notification = "Please activate quest in Aero.";
@@ -104,8 +107,8 @@ switch (_questman) do {
 	case ('Boris_Britva'): {
 		if (player getVariable ["questCurrent", ""] == "" && {"Ivan_Demidov" in _quests} && {!("Boris_Britva" in _quests)}) then {
 			player setVariable ["questCurrent", "Boris_Britva"];
-			_htext	= "Good job dude. You have fulfilled the task ! So much of my respect and so money"; 
-			_notification = "Find fire fluff";
+			_htext	= "Hi there. We have to get another anomaly but the reward is great! You must find the Fire Fluff!"; 
+			_notification = "Find Anomaly Fire Fluff";
 			player addItem _detector;
 			player setVariable ["questAnomalyType", "fluff", true];
 		} else {
@@ -113,9 +116,13 @@ switch (_questman) do {
 				switch (true) do {
 					case (_questItem in _inventoryItems): {
 						call _fnc_taskComplited;
-						_htext	= "Good job... Good quest... Take prize!!";
+						_htext	= "You have fulfilled the task ?! Good job... Good quest... Take prize!!";
 						_notification = "Quest complite";
 						player addItem 'U_O_CombatUniform_ocamo';
+						player addItem 'Exile_Item_CodeLock';
+						player addItem 'Exile_Item_CodeLock';
+						player addItem 'Exile_Item_CodeLock';
+						player addItem 'Exile_Item_CodeLock';
 					};
 					case (_detector in _inventoryItems): {
 						_notification = "You are already in a quest";

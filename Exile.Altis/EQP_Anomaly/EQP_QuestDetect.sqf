@@ -13,24 +13,24 @@ switch (_anomalyType) do {
 	case "electra": {
 	};
 	case "gravi": {
-		_addrespect = 2550;
-		_addpoptabs = 500;
+		_addrespect = 1250;
+		_addpoptabs = 2500;
 		_title	= "<t color='#7FFF00' size='1.2' shadow='1' shadowColor='#000000' align='center'>ANOMALY ACTIVITY TASK:</t><br/><t color='#ffffff'>¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯<br/>";
-		_htext   = format["You have successfully studied %1 and get a reward.", toUpper(_anomalyType)];
+		_htext  = "You have successfully studied the anomaly GRAVI. Go back to Basil.";
 	};
 	case "jarka": {
 	};
 	case "meat": {
-		_addrespect = 0;
-		_addpoptabs = 0;
+		_addrespect = 2500;
+		_addpoptabs = 5000;
 		_title	= "<t color='#7FFF00' size='1.2' shadow='1' shadowColor='#000000' align='center'>ANOMALY ACTIVITY TASK:</t><br/><t color='#ffffff'>¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯<br/>";
-		_htext   = format["You found an anomaly MEATGRINDER . But the detector seems broken. You need to find Ivan Demidov and tell him about the problems.", toUpper(_anomalyType)];	
+		_htext  = "You found an anomaly MEATGRINDER. But the detector seems broken. You need to find Ivan Demidov and tell him about the problem.";	
 	};
 	case "fluff": {
-		_addrespect = 2550;
-		_addpoptabs = 500;
+		_addrespect = 5000;
+		_addpoptabs = 10000;
 		_title	= "<t color='#7FFF00' size='1.2' shadow='1' shadowColor='#000000' align='center'>ANOMALY ACTIVITY TASK:</t><br/><t color='#ffffff'>¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯<br/>";
-		_htext   = format["You have successfully studied the anomaly BURNING FLUFF and struck her on the map . Find Boris Razor, and talk to him.", toUpper(_anomalyType)];
+		_htext  = "You have successfully studied the anomaly BURNING FLUFF and struck her on the map . Find Boris Razor, and talk to him.";
 	};
 };
 

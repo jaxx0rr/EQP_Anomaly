@@ -11,19 +11,33 @@ _useGarbage	= true; //**** Create garbaje area in center anomaly zone
 _useMarker	= true;  //**** Create quest marker for stuppid playes :)
 _useDebug	= true;  //**** Use debugmod
 _anmnumbers = 15;
-_spawnCenter = [23538.9,18636.4,0];
+//_spawnCenter = [23538.9,18636.4,0]; //ALTIS
+_spawnCenter = [5889.1045,9889.1045,0]; //NAMALSK
 _min = 10;
 _max = 250;
 _rad = (_max*2);
 _mindist = 1;
 _water = 0;
 _shoremode = 0;
+
+/*
+//ORIGINAL COORDS ALTIS
 _questmancoord =
 [
 	['C_Nikos',[14642.1,16888.2,0],135,'Basil_Obukhov'], // Format ['Modelname',[x,z,y],setdir,'Questman name'] Start EQP_Anomaly Quest in South Aero
 	['C_man_p_beggar_F_euro',[23332.1,24165.4,0],135,'Ivan_Demidov'], // Format ['Modelname',[x,z,y],setdir,'Questman name'] Unit 2 EQP_Anomaly Quest in East Tradezone
 	['B_Soldier_F',[3031.86,18148.8,0],310,'Boris_Britva'] // Format ['Modelname',[x,z,y],setdir,'Questman name'] Unit 3 EQP_Anomaly Quest in West Tradezone
 ];
+*/
+
+//COORDS NAMALSK
+_questmancoord =
+[
+	['C_Nikos',[4964.8,8055.7,0],50,'Basil_Obukhov'], // Format ['Modelname',[x,z,y],setdir,'Questman name'] Start EQP_Anomaly Quest in South Aero
+	['C_man_p_beggar_F_euro',[9053.2,10123.0,0],135,'Ivan_Demidov'], // Format ['Modelname',[x,z,y],setdir,'Questman name'] Unit 2 EQP_Anomaly Quest in East Tradezone
+	['B_Soldier_F',[4462.3,11149.9,0],310,'Boris_Britva'] // Format ['Modelname',[x,z,y],setdir,'Questman name'] Unit 3 EQP_Anomaly Quest in West Tradezone
+];
+
 _mapcolor = 'ColorRed';
 
 

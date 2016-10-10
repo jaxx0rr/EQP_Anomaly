@@ -1,10 +1,11 @@
 ﻿/* Attention particle animation and this code is copyrighted , it can be used freely only with the mod Exile. Do not modify! No modifications in their use!
 Author animation olke 2014-2015 , script code the SteelRat & olke 2016 */
 
+params [ "_anomaly", "_units"];
 private["_detector", "_questItem"];
 
 _detector = 'MineDetector';
-_questItem = 'Exile_Item_TreasureMap';
+_questItem = 'Exile_Magazine_Battery';
 
 {
 	if (_x isKindOf "Man") then {		
@@ -31,4 +32,6 @@ _questItem = 'Exile_Item_TreasureMap';
 			_x setDammage 1;
 		};
 	};
+//} forEach allUnits;
+	
 } forEach _units;
